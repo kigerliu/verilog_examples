@@ -4,12 +4,12 @@
 
 // top module
 module sync_f2s(
-    clk_f,
-    rstn_f,
-    clk_s,
-    rstn_s,
-    rd_en_i,
-    rd_en_o
+    clk_f   ,
+    rstn_f  ,
+    clk_s   ,
+    rstn_s  ,
+    rd_en_i ,
+    rd_en_o 
 );
 
 //*** PARAMETER *************************************************************************

@@ -1,7 +1,9 @@
 // testbench of fifo (top module)
 `timescale 1ns/1ps
-`define HALF_CLK_PERIOD_RD 5
-`define HALF_CLK_PERIOD_WR 18
+// `define HALF_CLK_PERIOD_RD 5
+`define HALF_CLK_PERIOD_RD 18
+// `define HALF_CLK_PERIOD_WR 18
+`define HALF_CLK_PERIOD_WR 5
 
 module tb_fifo;
 
@@ -30,8 +32,10 @@ module tb_fifo;
         .rd_en_i    (   rd_en_i     ) 
     );
 
-    reg     [64             -1:0]       rd_en_i_array   = 64'b0100000000000000000000000000000001010101010101010101010101010101;
-    reg     [64             -1:0]       wr_en_i_array   = 64'b0000001010101010101010101010101010101010101010101010101010101010;
+    // reg     [64             -1:0]       rd_en_i_array   = 64'b0100000000000000000000000000000001010101010101010101010101010101;
+    reg     [64             -1:0]       rd_en_i_array   = 64'b0101010101010101010101010101010101010101010101010101010101010101;
+    // reg     [64             -1:0]       wr_en_i_array   = 64'b0000001010101010101010101010101010101010101010101010101010101010;
+    reg     [64             -1:0]       wr_en_i_array   = 64'b0000101010101010101010101010101000000000000000000000000000000000;
 
     assign  rd_en_i         = rd_en_i_array     [64 -1] ;
     assign  wr_en_i         = wr_en_i_array     [64 -1] ;
